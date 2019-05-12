@@ -1,0 +1,14 @@
+In the Sections directory, click product-template.liquid.
+
+Find the following code:
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+Replace it with:
+
+{% assign current_variant = product.selected_variant %}
+Find the following code:
+
+selected="selected"
+Delete the above code, along with the Liquid logic tags that surround it. The code to be deleted looks like this:
+
+{% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}
